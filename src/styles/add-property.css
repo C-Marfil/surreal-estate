@@ -1,3 +1,18 @@
 .add-property {
-    padding: 10px;
+    display: grid;
+    grid-template-areas: 
+    "vip vip"
+    "int email";
+}
+
+.form_data--vip {
+    grid-area: vip;
+}
+
+.form_data--int {
+    grid-area: vip;
+}
+
+.form_data--email {
+    grid-area: email;
 }
