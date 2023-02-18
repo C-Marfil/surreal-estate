@@ -1,0 +1,11 @@
+.properties {
+    color:rgb(4, 4, 75);
+    display: flex;
+    flex-direction: column;
+    padding-top: 35%;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: rgb(179, 122, 244);
+    border-radius: 30px;
+}
+

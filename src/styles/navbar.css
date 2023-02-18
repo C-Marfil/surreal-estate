@@ -1,25 +1,31 @@
 .navbar {
-    background-color: white;
-    border-bottom: 5px solid grey;
-    height: 20vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(127, 68, 127);
+    border-radius: 50px;
+    width: 42%;
+    height: 100vh;
+    z-index: 1;
 }
 
 .navbar-links {
-    display: inline-block;
+    display:flex;
+    flex-direction: column;
+    width: 55%;
+    align-items: flex-end;
 }
+
 .navbar-links-item {
-    margin-left: 50px;
-    font-size: 50px;
     text-decoration: none;
-    color: red;
-    font-weight:bolder;
+    font-size: 10px;
+    color: rgb(14, 4, 4);
+    margin-top: 100px;
+    padding: 5px;
+    border: 5px solid rgb(137, 69, 137);
+    border-radius: 15%;
+    background-color: rgb(170, 152, 237);
 }
 
 .logo {
-    margin-top: 10px;
-    margin-right: 500px;
-    width:15.5vw;
-    height:11vh;
+   width: 100vw;
 }

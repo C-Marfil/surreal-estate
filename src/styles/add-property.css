@@ -1,18 +1,22 @@
 .add-property {
-    display: grid;
-    grid-template-areas: 
-    "vip vip"
-    "int email";
+    display: flex;
+    flex-direction: column;
+    padding-top: 50%;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: rgb(179, 122, 244);
+    border-radius: 30px;
+
 }
 
-.form_data--vip {
-    grid-area: vip;
+#type, #title, #email, #city {
+    margin-bottom: 30px;
+    border-radius: 5px;
 }
 
-.form_data--int {
-    grid-area: vip;
-}
-
-.form_data--email {
-    grid-area: email;
+#price, #bedrooms, #bathrooms {
+    margin-bottom: 20px;
+    width: 20px;
+    margin-left: 20px;
+    border-radius: 5px;
 }

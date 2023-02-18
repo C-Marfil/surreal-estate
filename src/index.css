@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,600;0,900;1,600;1,900&family=Sassy+Frass&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,600;0,900;1,600;1,900&family=Phudu:wght@300;400&family=Sassy+Frass&display=swap');
 
 body {
   height: 100vh;
@@ -6,7 +6,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Exo 2', sans-serif;
-  font-family: 'Sassy Frass', cursive;
+  font-family: 'Phudu', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

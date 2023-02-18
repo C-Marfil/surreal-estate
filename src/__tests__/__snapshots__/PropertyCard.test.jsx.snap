@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PropertyCard element and its props renders the component within another component 1`] = `
+<DocumentFragment>
+  <div>
+    <p>
+      I am the property card
+    </p>
+    <p />
+    <p />
+    <ul>
+      <li>
+        bathroom:
+      </li>
+      <li>
+        bedrooms:
+      </li>
+      <li>
+        moneys:$
+      </li>
+    </ul>
+    <p>
+      <a
+        href="mailto:undefined"
+      >
+        Email
+      </a>
+    </p>
+  </div>
+</DocumentFragment>
+`;

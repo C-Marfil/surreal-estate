@@ -1,23 +1,43 @@
+/* eslint-disable no-console */
 import { React, useState } from "react";
 import "../styles/add-property.css";
-import postProperty from "../requests/postProperties";
+import axios from "axios";
+import Alert from "./Alert";
 
 const Properties = () => {
   const initialState = {
     fields: {
       title: "",
-      city: "Manchester",
+      city: "",
       type: "",
       bedrooms: 0,
       bathrooms: 0,
       price: 0,
       email: "",
     },
+    alert: {
+      message: "",
+      isSuccess: false,
+    },
   };
   const [fields, setFields] = useState(initialState.fields);
+  const [alert, setAlert] = useState(initialState.alert);
+
+  const postProperty = async () => {
+    console.log(fields);
+    try {
+      await axios
+        .post("http://localhost:3000/api/v1/PropertyListing", fields)
+        .then(setAlert({ message: "Success!", isSuccess: true }));
+    } catch (error) {
+      setAlert({ message: "Error!", isSuccess: false });
+      console.log(error);
+    }
+  };
 
   const handleAppProperty = (event) => {
     event.preventDefault();
+    setAlert({ message: "", isSuccess: false });
     postProperty(fields);
   };
 
@@ -28,9 +48,10 @@ const Properties = () => {
   return (
     <div className="add-property">
       <form onSubmit={handleAppProperty}>
+        <Alert message={alert.message} success={alert.isSuccess} />
         <div className="form_data--vip">
           <label htmlFor="title">
-            Title
+            Listing Title
             <input
               id="title"
               name="title"
@@ -39,7 +60,6 @@ const Properties = () => {
             />
           </label>
           <label htmlFor="city">
-            Select
             <select
               id="city"
               name="city"
@@ -47,6 +67,7 @@ const Properties = () => {
               onChange={handleFieldChange}
               placeholder="City"
             >
+              <option>Select City</option>
               <option value="Leeds">Leeds</option>
               <option value="Manchester">Manchester</option>
               <option value="Sheffield">Sheffield</option>
@@ -54,7 +75,6 @@ const Properties = () => {
             </select>
           </label>
           <label htmlFor="type">
-            Select
             <select
               id="type"
               name="type"
