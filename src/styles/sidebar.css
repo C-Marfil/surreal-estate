@@ -1,0 +1,27 @@
+.sidebar {
+    width: 100vw;
+    top: 120px;
+    position: absolute;
+    background-color: rgb(222, 217, 239);
+    z-index: 1;
+}
+
+.quicklink {
+    text-decoration: none;
+    margin-left: 27px; 
+    font-size: 13px;
+}
+
+.searchbar {
+    width: 100vw;
+    top: 137px;
+    position: absolute;
+    background-color: rgb(222, 217, 239);
+    z-index: 1;
+}
+
+.search {
+    margin-left: 130px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

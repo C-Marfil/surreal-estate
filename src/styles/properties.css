@@ -2,10 +2,19 @@
     color:rgb(4, 4, 75);
     display: flex;
     flex-direction: column;
-    padding-top: 35%;
+    padding-top: 40%;
     padding-left: 10%;
     padding-right: 10%;
     background-color: rgb(179, 122, 244);
     border-radius: 30px;
 }
 
+.cards {
+    padding: 10px 10px 10px 10px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-left: 0px;
+    border: 2px solid purple;
+    border-radius: 10px;
+    text-align: center;
+}

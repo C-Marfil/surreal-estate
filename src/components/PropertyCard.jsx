@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const PropertyCard = ({
+  _id,
   title,
   type,
   bathrooms,
@@ -9,6 +10,8 @@ const PropertyCard = ({
   price,
   city,
   email,
+  userID,
+  onSave,
 }) => {
   const mailto = `mailto:${email}`;
 
@@ -24,6 +27,12 @@ const PropertyCard = ({
       <p>
         <a href={mailto}>Email</a>
       </p>
+      {userID && (
+        <button type="button" className="save" onClick={() => onSave(_id)}>
+          <i className="fas fa-star" />
+          Save
+        </button>
+      )}
     </div>
   );
 };
@@ -32,10 +41,13 @@ PropertyCard.propTypes = {
   title: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   city: PropTypes.string.isRequired,
-  bathrooms: PropTypes.number.isRequired,
-  bedrooms: PropTypes.number.isRequired,
-  price: PropTypes.number.isRequired,
+  bathrooms: PropTypes.string.isRequired,
+  bedrooms: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
+  onSave: PropTypes.func.isRequired,
+  _id: PropTypes.string.isRequired,
+  userID: PropTypes.string.isRequired,
 };
 
 export default PropertyCard;

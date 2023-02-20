@@ -1,12 +1,16 @@
 .alert {
-    width: 400px;
+    width: 90px;
     height: 40px;
     border-radius: 5px;
+    text-align: center;
+    padding-top: 15px;
+    margin-top: -40px;
+    margin-left: 20px;
 }
 
 .alert.alert-success {
-    border: 10px solid green;
-    background-color: aquamarine;
+    border: 10px solid rgb(145, 46, 231);
+    background-color: rgb(175, 119, 231);
 
 }
 
